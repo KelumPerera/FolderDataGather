@@ -31,7 +31,7 @@ file_data = pd.DataFrame(columns=file_Columns)
 
 # Walkthrough the folder path and gather details and put into pandas data frame       
 
-for root, dirs, files in os.walk(FolderPath):
+for root, dirs, files in os.walk(FolderPathToCheck):
     for fn in files:
         pathName = os.path.join(root, fn)            # Full path
         size = os.stat(pathName).st_size             # in bytes
