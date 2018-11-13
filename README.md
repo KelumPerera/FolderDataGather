@@ -1,3 +1,6 @@
+
+# Getting a data from excelsheet with a list new file names and old file names. ( or Create new file names)
+
 # Gather file details of a given folder
 Gathering important file meta data for a given folder and its sub folders.
 
@@ -11,4 +14,4 @@ File Path,
 File Nmae,
 File Extention
 
-Using the data from excel sheet, rename all the file names in the given folder
+# Using the data from excel sheet, rename all the file names in the given folder
