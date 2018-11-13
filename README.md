@@ -10,3 +10,5 @@ Hash Value md5,
 File Path,
 File Nmae,
 File Extention
+
+Using the data from excel sheet, rename all the file names in the given folder
