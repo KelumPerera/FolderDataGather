@@ -41,7 +41,7 @@ excel_data['FileRenamed'] = excel_data['SN'].map(str) +" "+ excel_data['FileName
 
 # Creates a pandas data frame        
 file_Columns =['File_Path_Name','File_Path','File_Name','File_Extention','File_Size(Bytes)','Created_Time','Modified_Time','User_Info','Hash_md5']
-file_data = pd.DataFrame(columns=file_Columns)
+filesInFolder_data = pd.DataFrame(columns=file_Columns)
 
 # Walkthrough the folder path and gather details and put into pandas data frame       
 
@@ -57,7 +57,7 @@ for root, dirs, files in os.walk(FolderPathToCheck):
         hash_md5 = hashlib.md5(open(os.path.join(root, fn), 'rb').read()).hexdigest() # get the hash value of the file
         filesInFolder_List =[[pathName,File_Path,File_Name,File_Extention,size,created_time,modified_time,userinfo,hash_md5]]
         filesInFolder_data1 = pd.DataFrame(filesInFolder_Listcolumns=file_Columns)
-        filesInFolder_data = file_data.append(filesInFolder_data1,ignore_index=True)
+        filesInFolder_data = filesInFolder_data.append(filesInFolder_data1,ignore_index=True)
 
 # Rename the file names of the files in folder if such file name matches with the files names in excel data
 for i, f in enumerate(os.listdir(FolderPathToCheck)):
